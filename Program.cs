@@ -8,7 +8,7 @@ namespace DailyWageProblem
         {
            
             EmpWage emp = new EmpWage();
-            emp.partTime();
+            emp.switchCase();
         }
     }
 }

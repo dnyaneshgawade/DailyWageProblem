@@ -6,13 +6,30 @@ namespace DailyWageProblem
 {
     public class EmpWage
     {
-        public const int WAGE_PER_HR = 20;
-        public const int PART_TIME_HR = 4;
+        const int Wage_Per_Hr = 20;
+        int payment = 0;
+        int workHr;
 
-        internal void partTime()
+        public void switchCase()
         {
-            int dailyWage = WAGE_PER_HR * PART_TIME_HR;
-            Console.WriteLine("daily wage=" + dailyWage);
+            Random random = new Random();
+            int num = random.Next(0, 3);
+            switch (num)
+            {
+                case 0:
+                    Console.WriteLine("daily wage of fulltime employee");
+                    workHr = 8;
+                    break;
+                case 1:
+                    Console.WriteLine("daily wage of parttime employee");
+                    workHr = 4;
+                    break;
+                default:
+                    Console.WriteLine("employee is absent");
+                    break;
+            }
+            payment = Wage_Per_Hr * workHr;
+            Console.WriteLine("Payment is:" + payment);
         }
 
     }
