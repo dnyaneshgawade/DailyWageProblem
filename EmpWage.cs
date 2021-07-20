@@ -8,10 +8,10 @@ namespace DailyWageProblem
     {
         public const int WAGE_PER_HR = 20;
         public const int PART_TIME_HR = 4;
-        public const int FULL_TIME_HR = 8;
-        public void find()
+
+        internal void partTime()
         {
-            int dailyWage = WAGE_PER_HR * FULL_TIME_HR;
+            int dailyWage = WAGE_PER_HR * PART_TIME_HR;
             Console.WriteLine("daily wage=" + dailyWage);
         }
 
