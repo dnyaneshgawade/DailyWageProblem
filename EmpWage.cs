@@ -6,13 +6,14 @@ namespace DailyWageProblem
 {
     public class EmpWage
     {
-        public void attendance()
+        public const int WAGE_PER_HR = 20;
+        public const int PART_TIME_HR = 4;
+        public const int FULL_TIME_HR = 8;
+        public void find()
         {
-            Random ran = new Random();
-            int attend = ran.Next(0, 2);
-            if (attend == 0)
-                Console.WriteLine("Employee is Present");
-
+            int dailyWage = WAGE_PER_HR * FULL_TIME_HR;
+            Console.WriteLine("daily wage=" + dailyWage);
         }
+
     }
 }
